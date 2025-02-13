@@ -7,6 +7,19 @@
     - PetsNT
     - Zombie
     - Revolutionary
+    - AllHostile
+    - WizFedFaction # Frontier
+    - BloodCultNF # Frontier
+    - PirateNF # Frontier
+    - ExplorersExpeditionNF # Frontier
+    - ArtifactConstruct # Frontier
+    - StreetGangNF # Frontier
+    - DinosaursNF # Frontier
+    - MercenariesExpeditionNF # Frontier
+    - SiliconsExpeditionNF # Frontier
+    - AberrantFleshExpeditionNF # Frontier
+    - ContrabandClothing # Frontier
+    - ContrabandDetection # Frontier
 
 - type: npcFaction
   id: NanoTrasen
@@ -16,11 +29,25 @@
   - Xeno
   - Zombie
   - Revolutionary
+  - Dragon
+  - AllHostile
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  - StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
 
 - type: npcFaction
   id: Mouse
   hostile:
   - PetsNT
+  - AllHostile
 
 - type: npcFaction
   id: Passive
@@ -29,9 +56,10 @@
   id: PetsNT
   hostile:
   - Mouse
-  - SimpleHostile
-  - Zombie
-  - Xeno
+  # - SimpleHostile # Frontier
+  # - Zombie # Frontier
+  # - Xeno # Frontier
+  # - AllHostile # Frontier
 
 - type: npcFaction
   id: SimpleHostile
@@ -42,18 +70,47 @@
   - PetsNT
   - Zombie
   - Revolutionary
+  - AllHostile
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  - StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
+  - ContrabandDetection # Frontier
 
 - type: npcFaction
   id: SimpleNeutral
 
 - type: npcFaction
   id: Syndicate
+  friendly: # Frontier
+  - SyndicateNF # Frontier
   hostile:
   - NanoTrasen
   - SimpleHostile
   - Xeno
   - PetsNT
   - Zombie
+  - Dragon
+  - AllHostile
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  - StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
+  - ContrabandDetection # Frontier
 
 - type: npcFaction
   id: Xeno
@@ -64,6 +121,19 @@
   - PetsNT
   - Zombie
   - Revolutionary
+  - AllHostile
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  - StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
+  - ContrabandDetection # Frontier
 
 - type: npcFaction
   id: Zombie
@@ -75,6 +145,19 @@
   - Passive
   - PetsNT
   - Revolutionary
+  - AllHostile
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  - StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
+  - ContrabandDetection # Frontier
 
 - type: npcFaction
   id: Revolutionary
@@ -83,3 +166,31 @@
   - Zombie
   - SimpleHostile
   - Dragon
+  - WizFedFaction # Frontier
+  - BloodCultNF # Frontier
+  - PirateNF # Frontier
+  - ExplorersExpeditionNF # Frontier
+  - ArtifactConstruct # Frontier
+  #- StreetGangNF # Frontier
+  - DinosaursNF # Frontier
+  - MercenariesExpeditionNF # Frontier
+  - SiliconsExpeditionNF # Frontier
+  - AberrantFleshExpeditionNF # Frontier
+  - ContrabandClothing # Frontier
+  - ContrabandDetection # Frontier
+  - AllHostile
+
+- type: npcFaction
+  id: AllHostile # Frontier: use HostileUniversally
+  hostile:
+  - NanoTrasen
+  - Dragon
+  - Mouse
+  - Passive
+  - PetsNT
+  - SimpleHostile
+  - SimpleNeutral
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary

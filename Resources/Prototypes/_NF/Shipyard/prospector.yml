@@ -1,16 +1,32 @@
+# Author Info
+# GitHub: ???
+# Discord: ???
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
 - type: vessel
   id: Prospector
+  parent: BaseVessel
   name: NC Prospector
   description: A small mining vessel designed to assist salvage operations.
-  price: 23000
+  price: 24500
   category: Small
-  group: Civilian
-  shuttlePath: /Maps/Shuttles/prospector.yml
+  group: Shipyard
+  shuttlePath: /Maps/_NF/Shuttles/prospector.yml
+  guidebookPage: ShipyardProspector
+  class:
+  - Salvage
+  engine:
+  - Plasma
 
 - type: gameMap
   id: Prospector
   mapName: 'NC Prospector'
-  mapPath: /Maps/Shuttles/prospector.yml
+  mapPath: /Maps/_NF/Shuttles/prospector.yml
   minPlayers: 0
   stations:
     Prospector:
@@ -22,6 +38,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
         - type: StationJobs
-          overflowJobs: []
           availableJobs:
-            SalvageSpecialist: [ 0, 0 ]
+            Contractor: [ 0, 0 ]
+            Pilot: [ 0, 0 ]
+            Mercenary: [ 0, 0 ]

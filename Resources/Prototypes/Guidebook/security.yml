@@ -3,15 +3,25 @@
   name: guide-entry-security
   text: "/ServerInfo/Guidebook/Security/Security.xml"
   children:
-    - DNA
-    - Defusal
+  - Forensics
+#  - Defusal # Frontier - largely irrelevant
+  - CriminalRecords
+#  - SpaceLaw # Frontier - irrelevant
+  - Smuggling # Frontier
 
 - type: guideEntry
-  id: DNA
-  name: guide-entry-dna
-  text: "/ServerInfo/Guidebook/Security/DNA.xml"
+  id: Forensics
+  name: guide-entry-forensics
+  text: "/ServerInfo/Guidebook/Security/Forensics.xml"
+
+# Frontier
+# - type: guideEntry
+#   id: Defusal
+#   name: guide-entry-defusal
+#   text: "/ServerInfo/Guidebook/Security/Defusal.xml"
+# End Frontier
 
 - type: guideEntry
-  id: Defusal
-  name: guide-entry-defusal
-  text: "/ServerInfo/Guidebook/Security/Defusal.xml"
+  id: CriminalRecords
+  name: guide-entry-criminal-records
+  text: "/ServerInfo/Guidebook/Security/CriminalRecords.xml"

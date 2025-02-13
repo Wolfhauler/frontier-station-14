@@ -3,6 +3,7 @@ using Content.Server._NF.M_Emp;
 using Content.Server.Shuttles.Systems;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Damage;
+using Content.Shared.DeviceLinking; // Frontier
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -66,19 +67,25 @@ namespace Content.Server.Shuttles.Components
         public string MachinePartThrust = "Capacitor";
 
         [DataField("partRatingThrustMultiplier")]
-        public float PartRatingThrustMultiplier = 1.5f;
-
-        [DataField("thrusterIgnoreEmp")]
-        public bool ThrusterIgnoreEmp = false;
+        public float PartRatingThrustMultiplier = 1.15f; // Frontier - PR #1292 1.5f<1.15f
 
         /// <summary>
-        ///     While disabled by EMP
+        ///     Frontier - Amount of charge this needs from an APC per second to function.
         /// </summary>
-        [DataField("timeoutFromEmp", customTypeSerializer: typeof(TimeOffsetSerializer))]
-        public TimeSpan TimeoutFromEmp = TimeSpan.Zero;
+        public float OriginalLoad { get; set; } = 0;
 
-        [DataField("disableDuration"), ViewVariables(VVAccess.ReadWrite)]
-        public float DisableDuration = 60f;
+        /// <summary>
+        ///     Frontier - Make linkable to buttons
+        /// </summary>
+        [DataField("onPort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))] // Frontier
+        public string OnPort = "On"; // Frontier
+
+        [DataField("offPort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))] // Frontier
+        public string OffPort = "Off"; // Frontier
+
+        [DataField("togglePort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))] // Frontier
+        public string TogglePort = "Toggle"; // Frontier
+
     }
 
     public enum ThrusterType

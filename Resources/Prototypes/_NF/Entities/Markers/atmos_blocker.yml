@@ -14,7 +14,7 @@
           shader: unshaded # }
           state: oxygen
     - type: AtmosFixMarker
-      mode: 7
+      mode: 8
 
 - type: entity
   name: Atmos Fix Nitrogen Marker
@@ -32,7 +32,7 @@
           shader: unshaded # }
           state: nitrogen
     - type: AtmosFixMarker
-      mode: 8
+      mode: 9
 
 - type: entity
   name: Atmos Fix Plasma Marker
@@ -50,4 +50,21 @@
           shader: unshaded # }
           state: plasma
     - type: AtmosFixMarker
-      mode: 9
+      mode: 10
+
+- type: entity
+  name: Atmos Fix Sauna Marker
+  id: AtmosFixSaunaMarker
+  description: "Sauna"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: watervapour
+    - type: AtmosFixMarker
+      mode: 11

@@ -1,0 +1,33 @@
+#T0
+- type: loadout
+  id: ContractorEncryptionKeyTraffic
+  storage:
+    back:
+    - EncryptionKeyTraffic
+
+- type: loadout
+  id: ContractorEncryptionKeyMedical
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFNotDoc
+  storage:
+    back:
+    - EncryptionKeyMedical
+
+- type: loadout
+  id: ContractorEncryptionKeyCargo
+  storage:
+    back:
+    - EncryptionKeyCargo
+
+- type: loadout
+  id: ContractorEncryptionKeyEngineering
+  storage:
+    back:
+    - EncryptionKeyEngineering
+
+- type: loadout
+  id: ContractorEncryptionKeyScience
+  storage:
+    back:
+    - EncryptionKeyScience

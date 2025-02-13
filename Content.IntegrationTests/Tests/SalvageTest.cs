@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using Content.Server.Salvage;
+using System.Linq;
 using Content.Shared.CCVar;
+using Content.Shared.Salvage;
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 using Robust.Shared.GameObjects;
@@ -17,6 +17,7 @@ public sealed class SalvageTest
     /// Asserts that all salvage maps have been saved as grids and are loadable.
     /// </summary>
     [Test]
+    [Ignore("Not currently used by Frontier.")] // Frontier
     public async Task AllSalvageMapsLoadableTest()
     {
         await using var pair = await PoolManager.GetServerClient();
@@ -27,6 +28,7 @@ public sealed class SalvageTest
         var mapManager = server.ResolveDependency<IMapManager>();
         var prototypeManager = server.ResolveDependency<IPrototypeManager>();
         var cfg = server.ResolveDependency<IConfigurationManager>();
+        var mapSystem = entManager.System<SharedMapSystem>();
         Assert.That(cfg.GetCVar(CCVars.GridFill), Is.False);
 
         await server.WaitPost(() =>
@@ -35,7 +37,7 @@ public sealed class SalvageTest
             {
                 var mapFile = salvage.MapPath;
 
-                var mapId = mapManager.CreateMap();
+                mapSystem.CreateMap(out var mapId);
                 try
                 {
                     Assert.That(mapLoader.TryLoad(mapId, mapFile.ToString(), out var roots));

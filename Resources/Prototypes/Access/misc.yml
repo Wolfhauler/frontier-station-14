@@ -10,11 +10,14 @@
   - ResearchDirector
   - Frontier # Frontier
   - Command
+  - Cryogenics
   - Security
   - Detective
   - Armory
   - Brig
+  - Lawyer
   - Engineering
+  - Mail # Frontier
   - Medical
   - Mercenary # Frontier
   - Quartermaster
@@ -22,6 +25,9 @@
   - Cargo
   - Research
   - Service
+  - StationTrafficController # Frontier
+  - Sergeant # Frontier
+  - Bailiff # Frontier
   - Maintenance
   - External
   - Janitor

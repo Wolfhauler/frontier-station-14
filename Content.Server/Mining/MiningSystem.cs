@@ -1,6 +1,6 @@
-using Content.Server.Mining.Components;
 using Content.Shared.Destructible;
 using Content.Shared.Mining;
+using Content.Shared.Mining.Components;
 using Content.Shared.Random;
 using Content.Shared.Random.Helpers;
 using Robust.Shared.Prototypes;
@@ -28,6 +28,11 @@ public sealed class MiningSystem : EntitySystem
     {
         if (component.CurrentOre == null)
             return;
+
+        // Frontier
+        if (component.PreventSpawning)
+            return;
+        // End Frontier
 
         var proto = _proto.Index<OrePrototype>(component.CurrentOre);
 

@@ -1,0 +1,30 @@
+- type: entity
+  name: ore bag of holding
+  id: OreBagOfHolding
+  parent: OreBag
+  description: A robust bag of holding for salvage billionaires and rich miners alike to carry large amounts of ore. Magnetises any nearby ores when attached to a belt.
+  components:
+  - type: MagnetPickup
+    range: 2
+  - type: Sprite
+    sprite: _NF/Objects/Specific/Mining/ore_bag_holding.rsi # Frontier
+    # state: icon # Frontier
+    layers: # Frontier
+    - state: icon # Frontier
+    - state: icon-unlit # Frontier
+      shader: unshaded # Frontier
+  - type: Clothing
+    sprite: _NF/Objects/Specific/Mining/ore_bag_holding.rsi # Frontier
+  - type: Storage
+    grid:
+    - 0,0,19,9
+  - type: Item # Frontier
+    inhandVisuals: # Frontier
+      left: # Frontier
+      - state: inhand-left # Frontier
+      - state: inhand-left-unlit # Frontier
+        shader: unshaded # Frontier
+      right: # Frontier
+      - state: inhand-right # Frontier
+      - state: inhand-right-unlit # Frontier
+        shader: unshaded # Frontier

@@ -1,4 +1,3 @@
-using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization;
@@ -39,6 +38,12 @@ namespace Content.Shared.Chemistry
         {
             PillType = pillType;
         }
+    }
+
+    [Serializable, NetSerializable]
+    public enum ChemMasterVisualState : byte // Frontier
+    {
+        BeakerInserted
     }
 
     [Serializable, NetSerializable]
